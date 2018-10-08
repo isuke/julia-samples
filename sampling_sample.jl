@@ -37,3 +37,14 @@ nquantile(arr3, 2)
 mode(arr3)
 
 summarystats(arr3)
+
+ordinalrank(arr3)
+
+
+arr4 = rand(1:5, 30)
+
+counts(arr4)
+proportions(arr4)
+proportions(arr4, 1:3)
+countmap(arr4)
+proportionmap(arr4)

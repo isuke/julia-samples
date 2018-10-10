@@ -27,6 +27,7 @@ Julia: v1.0.0
   [a1b4810d] Hexagons v0.2.0
   [7073ff75] IJulia v1.12.0
   [438e738f] PyCall v1.18.4
+  [d330b81b] PyPlot v2.6.3
   [ce6b1742] RDatasets v0.5.0
   [2913bbd2] StatsBase v0.25.0
   [3eaba693] StatsModels v0.3.1

@@ -1,12 +1,4 @@
-x = 0
-
-function update(x::Real, p::Real = 0.5)
-  if rand() < p
-    x + one(x)
-  else
-    x - one(x)
-  end
-end
+include("update.jl")
 
 function randmwalk(nsteps::Integer, prob::Real = 0.5)
   result = zeros(Int, nsteps + 1)

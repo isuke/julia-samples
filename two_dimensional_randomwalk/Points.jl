@@ -7,6 +7,8 @@ module Points
 
   export Point, update, plot_str
 
+  abstract type Point end
+
   zero(x::Point) = zero(typeof(x))
   rand(x::Point) = rand(typeof(x))
 
@@ -19,7 +21,7 @@ module Points
   end
 
   *(p::Point, a::Real) = a * p
-  \(a::Real, p::Point),  = p / a
+  \(a::Real, p::Point) = p / a
 
   abs(p::Point) = sqrt(abs2(p))
   update(p::Point) = p + rand(p)
@@ -27,17 +29,3 @@ module Points
   include("Point1d.jl")
   include("Point2d.jl")
 end
-
-abstract type Point end
-
-mutable struct Point1D <: Point
-  x::Float64
-end
-
-mutable struct Point2D <: Point
-  x::Float64
-  y::Float64
-end
-
-
-zeros(A::AbstractArray{P}) where {P <: Point} = zeros(P, size(A))
